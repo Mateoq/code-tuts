@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   entry: './app/index.js',
@@ -10,7 +10,8 @@ module.exports = {
   watch: true,
   devServer: {
     inline: true,
-    port: 3001
+    port: 3001,
+    publicPath: '/public/'
   },
   module: {
     loaders: [
