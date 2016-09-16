@@ -24,10 +24,10 @@ const todo = (state, action) => {
 
       return {
         ...state,
-        completed: !state.completed
+  completed: !state.completed
       };
     default:
-      return state;
+return state;
   }
 };
 
@@ -46,7 +46,7 @@ const todos = (state = [], action) => {
 };
 
 const visibilityFilter = (state = 'SHOW_ALL',
-                          action) => {
+  action) => {
   switch (action.type) {
     case 'SET_VISIBILITY_FILTER':
       return action.filter;
@@ -83,16 +83,16 @@ const Link = ({
   children
 }) => {
   if (active) {
-    return ( <span>{children}</span> );
+    return (<span>{children}</span>);
   }
 
   return (
     <a href='#'
-       onClick={e => {
-         e.preventDefault();
-         onClick();
-       }}
-    >
+      onClick={e => {
+        e.preventDefault();
+        onClick();
+      } }
+      >
       {children}
     </a>
   );
@@ -128,7 +128,7 @@ class FilterLink extends React.Component {
         >
         {props.children}
       </Link>
-    )
+    );
   }
 }
 
@@ -161,31 +161,31 @@ const Todo = ({
   onClick,
   completed
 }) => (
-  <li
+    <li
       onClick={onClick}
       style={{
         textDecoration: completed ?
           'line-through' :
           'none'
       }}>
-    {text}
-  </li>
-);
+      {text}
+    </li>
+  );
 
 const TodoList = ({
-   todos,
-   onTodoClick
+  todos,
+  onTodoClick
 }) => (
-  <ul>
-    {todos.map(todo => (
-      <Todo
-        key={todo.id}
-        onClick={() => onTodoClick(todo.id)}
-        {...todo}
-        />
-    ))}
-  </ul>
-);
+    <ul>
+      {todos.map(todo => (
+        <Todo
+          key={todo.id}
+          onClick={() => onTodoClick(todo.id)}
+          {...todo}
+          />
+      ))}
+    </ul>
+  );
 
 const AddTodo = () => {
   let input;
@@ -194,7 +194,7 @@ const AddTodo = () => {
     <div>
       <input type="text" ref={node => {
         input = node;
-      }}/>
+      } } />
       <button onClick={() => {
         store.dispatch({
           type: 'ADD_TODO',
@@ -202,7 +202,7 @@ const AddTodo = () => {
           text: input.value
         });
         input.value = '';
-      }}>
+      } }>
         Add Todo
       </button>
     </div>
@@ -210,7 +210,7 @@ const AddTodo = () => {
 };
 
 const getVisibleTodos = (todos,
-                         filter) => {
+  filter) => {
   switch (filter) {
     case 'SHOW_ALL':
       return todos;
