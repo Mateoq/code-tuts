@@ -14,7 +14,8 @@
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-createreducer": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
