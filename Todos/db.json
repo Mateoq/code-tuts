@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "name": "cleanup",
+      "id": 1
+    },
+    {
+      "name": "todo",
+      "id": 2
+    },
+    {
+      "name": "work",
+      "id": 3
+    }
+  ]
+}
