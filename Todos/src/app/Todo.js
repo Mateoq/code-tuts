@@ -7,6 +7,8 @@ import {
   TouchableOpacity
 } from 'react-native';
 
+import Reddit from './Reddit';
+
 // Styles.
 import { styles } from './styles';
 
@@ -62,6 +64,7 @@ class Todo extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Reddit />
         <View style={styles.form}>
           <TextInput
             style={styles.input}
